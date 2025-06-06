@@ -15,8 +15,8 @@ export function createSchemaRequestHandler(rootPath?: string): SchemaRequestServ
 
         // If the requested schema URI is a relative file path
         // Convert it into a proper absolute path URI
-        if (rootPath && isRelativePath(uri)) {
-            uri = relativeToAbsolutePath(rootPath, uri);
+        if (isRelativePath(uri)) {
+            uri = relativeToAbsolutePath(rootPath ?? '', uri);
         }
 
         let scheme = URI.parse(uri).scheme.toLowerCase();

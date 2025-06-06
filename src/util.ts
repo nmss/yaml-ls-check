@@ -17,7 +17,7 @@ export const relativeToAbsolutePath = (rootPath: string, uri: string): string =>
     }
 
     // Fallback in case nothing could be applied
-    return path.normalize(uri);
+    return path.resolve(uri);
 };
 
 export function readJson(path: string) {
