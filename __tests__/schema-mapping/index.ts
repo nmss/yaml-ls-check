@@ -45,3 +45,14 @@ describe('embedded schema mapping inside file', () => {
         expect(invalidFiles.length).toBeGreaterThan(0);
     });
 });
+
+describe('schema mapping using refs', () => {
+  it('valid file using ref', async () => {
+        const invalidFiles = await getValidationResults(['valid-ref.yml'], { rootDir: rootPath });
+        expect(invalidFiles.length).toBe(0);
+  })
+  it('invalid file using ref', async () => {
+        const invalidFiles = await getValidationResults(['invalid-ref.yml'], { rootDir: rootPath });
+        expect(invalidFiles.length).toBeGreaterThan(0);
+  })
+});
