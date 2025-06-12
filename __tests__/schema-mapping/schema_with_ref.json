@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "simple",
+  "additionalProperties": false,
+  "required": [
+    "content"
+  ],
+  "properties": {
+    "content": {
+      "$ref": "./schema_with_name.json"
+    }
+  }
+}

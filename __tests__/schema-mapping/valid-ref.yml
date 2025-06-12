@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=schema_with_ref.json
+content:
+  name: Hi!
